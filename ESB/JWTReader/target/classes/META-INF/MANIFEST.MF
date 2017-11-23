@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-Description: JWTReader
+Bundle-SymbolicName: JWTReader
+Built-By: senuwan
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1511431769740
+Import-Package: net.minidev.json,net.minidev.json.parser,org.apache.ax
+ iom.util.base64,org.apache.axis2.context;version="[1.6,2)",org.apache
+ .synapse,org.apache.synapse.core.axis2,org.apache.synapse.mediators
+DynamicImport-Package: *
+Tool: Bnd-1.15.0
+Export-Package: org.wso2.sample;uses:="net.minidev.json.parser,org.apa
+ che.synapse.mediators,net.minidev.json,org.apache.synapse.core.axis2,
+ org.apache.axiom.util.base64,org.apache.axis2.context,org.apache.syna
+ pse"
+Bundle-Name: JWTReader
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_131
+

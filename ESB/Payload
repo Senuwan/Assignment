@@ -1,0 +1,46 @@
+{
+	"patient": {
+		"medical": {
+			"condition": "Good",
+			"treatment": "ECG"
+		},
+			"parentGuardian": {
+				"guardianEmail": "perera@abc.com",
+				"guardianName": "dushan",
+				"guardianPhone": "125423"
+			},
+				"patientContact": {
+					"address": "colombo 03",
+					"email": "dsad@gmail.com ",
+					"phone": "12321321"
+			},
+					"physician": {
+						"physicianEmail": "gihasdsn@yahoo.com",
+						"physicianName": "chamara",
+						"physicianPhone": "123213213"
+				},
+						"insurer": {
+							"insurerEmail": "vihaga@gmail.com",
+							"insurerName": "suneth",
+							"insurerPhone": "23453242"
+						},
+				
+
+		"patientFullName": "WSO2",
+		"patientId": "1234"
+	}
+}
+
+
+// Users
+adminuser,physicians,patient
+
+// Scopes
+AllUsers, Admin,Physicians
+
+// Single Role
+
+curl -k -d "grant_type=password&username=adminuser&password=admin&scope=AllUsers" \-H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" \   https://10.100.7.13:8244/token
+
+// Multipal Roles
+curl -k -d "grant_type=password&username=adminuser&password=admin&scope=AllUsers" \-H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" \   https://10.100.7.13:8244/token
