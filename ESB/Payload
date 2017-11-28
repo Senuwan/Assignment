@@ -26,8 +26,8 @@
 						},
 				
 
-		"patientFullName": "WSO2",
-		"patientId": "1234"
+		"patientFullName": "WSO2Colombo",
+		"patientId": "333"
 	}
 }
 
@@ -38,9 +38,43 @@ adminuser,physicians,patient
 // Scopes
 AllUsers, Admin,Physicians
 
-// Single Role
+---------------------------------------------------------------------------------------------------------------------------------------------
+GET
+---------------------------------------------------------------------------------------------------------------------------------------------
 
-curl -k -d "grant_type=password&username=adminuser&password=admin&scope=AllUsers" \-H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" \   https://10.100.7.13:8244/token
 
-// Multipal Roles
-curl -k -d "grant_type=password&username=adminuser&password=admin&scope=AllUsers" \-H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" \   https://10.100.7.13:8244/token
+adminuser
+
+curl -k -d "grant_type=password&username=adminuser&password=admin&scope=AllUsers" -H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" https://10.100.7.13:8244/token
+
+
+physicians
+
+curl -k -d "grant_type=password&username=Physicians&password=admin&scope=AllUsers" -H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" https://10.100.7.13:8244/token
+
+
+
+patient
+
+curl -k -d "grant_type=password&username=patient&password=admin&scope=AllUsers" -H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" https://10.100.7.13:8244/token
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+PUT
+----------------------------------------------------------------------------------------------------------------------------------------
+
+curl -k -d "grant_type=password&username=Physicians&password=admin&scope=AllUsers Physicians" -H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" https://10.100.7.13:8244/token
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+POST  / Delete
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+curl -k -d "grant_type=password&username=adminuser&password=admin&scope=Admin AllUsers" -H "Authorization: Basic aFZ0cGo0a253NzQ5ZjFfMDQ4eE1yc01tcW9jYTpiWTZKVF85eXJySDdGa3BFam5FcG1WZ19BRHNh" https://10.100.7.13:8244/token
+
